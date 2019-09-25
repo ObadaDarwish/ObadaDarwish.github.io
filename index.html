@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obada Darwish</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/user.png" sizes="16x16">
+    <script src="jquery.min.3.31.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="header_block">
+    <a id="nav_home">Home</a>
+    <a id="nav_project">Projects</a>
+</div>
+<div class="header">
+
+    <div class="img_container">
+        <img src="assets/IMG_20160729_005412.jpg"/>
+    </div>
+    <div class="horizontal_tilted_line negative_skew black top"></div>
+</div>
+
+<div class="my_details">
+    <div class="details_wrapper">
+        <div class="my_info">
+            <div class="name_occupation_wrapper">
+                <div class="cutter top"></div>
+                <h1 id="name">Obada Darwish</h1>
+                <h3 id="jobTitle">Front-end Web Developer</h3>
+                <div class="cutter bottom"></div>
+            </div>
+            <div id="aboutMe">
+                <p>I’m a front-end web developer with over three years of professional
+                    experience in the developing industry. <br>
+                    <br>I am just a simple guy who loves manipulating data back and forth!
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="projects_block">
+
+    <!--<div class="down_triangle"></div>-->
+    <div class="projects_title">
+        <h3>Projects</h3>
+    </div>
+    <div class="project_container" onmouseenter="hoverProject('1')">
+        <div class="project_info" id="gbarena">
+            <h1>GBarena</h1>
+            <p>An ANGULAR 7 built gaming platform, it is a website that provides a tool for tournaments organizers
+                to create their tournaments from A-Z, it helps them communicate with gamers easily, it also helps
+                gamers to easily find their tournaments, the platform provides a community were users can interact </p>
+        </div>
+        <div class="img_wrapper" id="1">
+            <div class="img_overlay">
+                <div class="hash">Angular 7</div>
+                <div class="hash">Laravel 5.3</div>
+            </div>
+            <img class="image" src="assets/gbarena.PNG"/>
+        </div>
+    </div>
+    <div class="project_container" onmouseenter="hoverProject('2')">
+        <div class="img_wrapper" id="2" >
+            <div class="img_overlay">
+                <div class="hash">Angular 2</div>
+                <div class="hash">Laravel 5.3</div>
+            </div>
+            <img class="image" src="assets/donuts.JPG"/>
+        </div>
+        <div class="project_info" id="donuts">
+            <h1>Donut hub</h1>
+            <p>An ANGULAR 2 built website, which views a store products of donuts and beverage
+                it is connected with LARAVEL APIs to feed it with the data needed! </p>
+        </div>
+    </div>
+    <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('3')">
+        <div class="project_info" id="manar">
+            <h1>Manar Travel</h1>
+            <p>A React built website, which views a store products of donuts and beverage
+                it is connected with LARAVEL APIs to feed it with the data needed! </p>
+        </div>
+        <div class="img_wrapper" id="3" >
+            <div class="img_overlay">
+                <div class="hash">React</div>
+                <div class="hash">Node.js</div>
+            </div>
+            <img class="image" src="assets/manarTravel.JPG"/></div>
+    </div>
+    <div class="project_container" onmouseenter="hoverProject('4')">
+        <div class="img_wrapper" id="4" >
+            <div class="img_overlay">
+                <div class="hash">Angular 4</div>
+                <div class="hash">Laravel 5.5</div>
+            </div>
+            <img class="image" src="assets/hamoudaFarms.JPG"/>
+        </div>
+        <div class="project_info" id="farm">
+            <h1>Hamouda Farms</h1>
+            <p>An ANGULAR 2 built website, which views a store products of donuts and beverage
+                it is connected with LARAVEL APIs to feed it with the data needed! </p>
+        </div>
+    </div>
+</div>
+<div class="footer_block">
+    <!--<div class="horizontal_tilted_line positive_skew black top"></div>-->
+
+    <div class="socials">
+        <div class="icons">
+            <a href="mailto:obada_567@hotmail.co.uk" target="_blank"> obada_567@hotmail.co.uk</a>
+            <div class="verticalLine"></div>
+            <i class="fab fa-2x fa-facebook-square" onclick="openProfile('https://www.facebook.com/obada.darwish')"></i>
+            <i class="fab fa-2x fa-instagram" onclick="openProfile('https://www.instagram.com/obadadarwish')"></i>
+            <i class="fab fa-2x fa-twitter-square" onclick="openProfile('https://twitter.com/obadadarwish')"></i>
+
+
+        </div>
+    </div>
+    <i id="scroll_up" class="fas fa-2x fa-chevron-circle-up"></i>
+</div>
+</body>
+</html>
