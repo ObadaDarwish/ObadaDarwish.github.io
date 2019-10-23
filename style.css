@@ -5,7 +5,8 @@
 body {
     background: #000000;
     margin: 0;
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     flex-flow: column;
 }
 
@@ -166,20 +167,23 @@ body {
     height: 230px;
     width: 230px;
 }
-.my_details{
+
+.my_details {
     width: 100%;
     background-color: #f1f1f1;
     display: flex;
     justify-content: center;
     flex-flow: column;
 }
-.details_wrapper{
+
+.details_wrapper {
     margin: 10%;
     display: flex;
     flex-flow: column;
     align-items: center;
     margin-top: 17%;
 }
+
 .outerclip {
     -webkit-transform: skew(-30deg);
     -ms-transform: skew(-30deg);
@@ -286,6 +290,8 @@ body {
 
 .project_container {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
     width: 100%;
     position: relative;
     padding-bottom: 3%;
@@ -296,7 +302,7 @@ body {
     overflow: hidden;
     width: 45%;
     height: 400px;
-    margin: 3%;
+    margin: 3% 0;
     transition: 0.3s ease;
 }
 
@@ -337,20 +343,25 @@ body {
     align-items: center;
     flex-flow: column;
     width: 50%;
-    padding: 3%;
+    margin: 20px;
 }
-#manar{
+
+
+#manar {
     opacity: 0;
     transition: opacity 2s ease;
 }
-#donuts{
+
+#donuts {
     opacity: 0;
     transition: opacity 2s ease;
 }
-#farm{
+
+#farm {
     opacity: 0;
     transition: opacity 2s ease;
 }
+
 .project_info h1, .project_info p {
     color: #424242;
 }
@@ -442,16 +453,20 @@ body {
 .fa-facebook-square {
     color: #ffffff;
 }
+
 .fa-facebook-square {
     color: #ffffff;
 }
-.fa-twitter-square{
+
+.fa-twitter-square {
     color: #ffffff;
 }
+
 .fa-facebook-square:hover {
     color: #3b5998;
 }
-.fa-twitter-square:hover{
+
+.fa-twitter-square:hover {
     color: #1DA1F2
 }
 
@@ -483,4 +498,26 @@ body {
 
 .fab {
     margin: 3%;
+}
+@media screen and (max-device-width: 767px) {
+    .horizontal_tilted_line{
+        display: none;
+    }
+    .project_info {
+        width: 100%;
+    }
+    .img_wrapper{
+        width: 80%;
+    }
+    #manar {
+        opacity: 1;
+    }
+
+    #donuts {
+        opacity: 1;
+    }
+
+    #farm {
+        opacity: 1;
+    }
 }
