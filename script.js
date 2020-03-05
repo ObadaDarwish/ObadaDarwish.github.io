@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('html').animate({scrollTop: 0}, 1000);
     });
     $('#aboutMe').slideDown(1500);
-
+    $('#aboutMe').css('display','flex');
     $('#nav_project').click(function () {
         $('html').animate({scrollTop: $('.projects_block').offset().top}, 1000);
     });
