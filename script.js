@@ -51,5 +51,5 @@ $(document).scroll(function () {
         $('#farm').css('opacity', '1');
     }
 
-    $('.header_block').css({background: $(this).scrollTop() > $('.my_details').offset().top ? 'rgba(0, 0, 0,1)' : 'rgba(0, 0, 0,0.5)'});
+    $('.header_block').css({background: $(this).scrollTop() > $('.my_details').offset().top ? 'rgba(0, 0, 0,1)' : 'rgb(159, 159, 159)'});
 });

@@ -7,6 +7,8 @@
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/user.png" sizes="16x16">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="jquery.min.3.31.js"></script>
     <script src="script.js"></script>
 </head>
@@ -16,26 +18,20 @@
     <a id="nav_project">Projects</a>
 </nav>
 <header class="header">
-    <div class="clipped_background"></div>
-    <div class="img_container">
-        <img src="assets/IMG_20160729_005412.jpg"/>
-    </div>
-    <!--<div class="horizontal_tilted_line negative_skew black top"></div>-->
-</header>
-<main>
-    <div class="my_details">
+    <!--<div class="clipped_background"></div>-->
+    <div class="avatar_container">
+        <div class="avatar_wrapper">
+            <img src="assets/IMG_20160729_005412.jpg"/>
+        </div>
         <div class="details_wrapper">
             <div class="my_info">
                 <div class="name_occupation_wrapper">
-                    <div class="cutter top"></div>
                     <h1 id="name">Obada Darwish</h1>
                     <h3 id="jobTitle">Front-end Web Developer</h3>
-                    <div class="cutter bottom"></div>
                 </div>
                 <div id="aboutMe">
-                    <p>I’m a front-end web developer with over three years of professional
-                        experience in the developing industry. <br>
-                        <br>I am just a simple guy who loves manipulating data back and forth!
+                    <p>I’m a front-end web developer with around four years of professional
+                        experience in the web development industry. <br>
                     </p>
                 </div>
 
@@ -43,7 +39,39 @@
             </div>
         </div>
     </div>
-
+    <div class="skewed_block">
+        <div class="skill_wrapper"><i class="fab fa-2x fa-angular"></i>
+            <p>Angular</p></div>
+        <div class="skill_wrapper"><i class="fab fa-2x fa-react"></i>
+            <p>React</p></div>
+        <div class="skill_wrapper"><i class="fab fa-2x fa-node"></i>
+            <p>Node.js</p></div>
+    </div>
+    <!--<div class="horizontal_tilted_line negative_skew black top"></div>-->
+</header>
+<main>
+    <div class="skills_set">
+        <div class="skill">
+            <i class="fas fa-2x fa-seedling"></i>
+            <h3>Grow</h3>
+            <p> My web development work has helped grow revenues, accelerate customer acquisition, increase web
+                traffic and deliver an industry-leading competitive advantage in an agile development
+                environment</p>
+        </div>
+        <div class="skill">
+            <i class="fas fa-2x fa-tasks"></i>
+            <h3>Management</h3>
+            <p> As a web developer focused on customer satisfaction, I manage all aspects of web development
+                from concept to requirements definition, design, development, launch, maintenance and user
+                support.</p>
+        </div>
+        <div class="skill">
+            <i class="fas fa-2x fa-users"></i>
+            <h3>Team</h3>
+            <p> I enjoy working closely with team members to produce high-quality features, as participation in
+            a team deliver better quality requirements in less time.</p>
+        </div>
+    </div>
     <div class="projects_block">
 
         <!--<div class="down_triangle"></div>-->
@@ -61,7 +89,6 @@
             <div class="img_wrapper" id="1">
                 <div class="img_overlay">
                     <div class="hash">Angular 7</div>
-                    <div class="hash">Laravel 5.3</div>
                 </div>
                 <img class="image" src="assets/gbarena.PNG"/>
             </div>
@@ -83,8 +110,9 @@
         <div class="project_container" onmouseenter="hoverProject('3')">
             <div class="project_info" id="manar">
                 <h1>Manar Travel</h1>
-                <p>A React built website, which views a store products of donuts and beverage
-                    it is connected with LARAVEL APIs to feed it with the data needed! </p>
+                <p>A React built website for a travel agency to view their features programs
+                    aslo allow user to request a custom program with custom quota.
+                    It's endpoints are written in Node.js  </p>
             </div>
             <div class="img_wrapper" id="3">
                 <div class="img_overlay">
@@ -103,8 +131,9 @@
             </div>
             <div class="project_info" id="farm">
                 <h1>Hamouda Farms</h1>
-                <p>An ANGULAR 2 built website, which views a store products of donuts and beverage
-                    it is connected with LARAVEL APIs to feed it with the data needed! </p>
+                <p>An ANGULAR 2 built website, custom built for a farm owner as they are specialized in farming
+                    organic foods and exporting it. owner can upload images of his farm and receive requests form
+                    customers. </p>
             </div>
         </div>
     </div>
