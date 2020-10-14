@@ -73,6 +73,51 @@ body {
     height: 100vh;
     background: #f1f1f1;
     justify-content: space-around;
+    padding-top: 40px;
+}
+
+.personalWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.avatar_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 30%;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px 2px #bbbbbb;
+}
+
+.cover_letter {
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.cover_letter p {
+    font-size: 20px;
+}
+
+.avatar_wrapper {
+    position: absolute;
+    top: -50px;
+    height: 150px;
+    width: 150px;
+}
+
+.avatar_wrapper img {
+    border-radius: 150px;
+    /*box-shadow: 0 0 6px 1px #505050;*/
+    border: 8px solid #f1f1f1;
+    height: inherit;
+    width: inherit;
 }
 
 
@@ -104,6 +149,7 @@ body {
 .details_wrapper .my_info .name_occupation_wrapper #name {
     font-size: 55px;
     display: none;
+    margin-top: 20px;
 }
 
 .details_wrapper .my_info .name_occupation_wrapper #jobTitle {
@@ -111,59 +157,6 @@ body {
     font-size: 25px;
 }
 
-
-.my_info #aboutMe {
-    display: flex;
-    align-items: center;
-    flex-basis: 50%;
-    padding: 0 15px;
-}
-
-.my_info #aboutMe p {
-    font-size: 18px;
-    display: flex;
-    margin: 0;
-    text-align: left;
-    justify-content: center;
-    flex-flow: column;
-    font-family: cursive;
-    position: relative;
-}
-
-.my_info #aboutMe p::before {
-    content: '';
-    height: 90%;
-    margin-left: -10px;
-    width: 3px;
-    background: #616161ee;
-    position: absolute;
-}
-
-.avatar_container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    margin-top: 5%;
-    width: 500px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-}
-
-.avatar_wrapper {
-    position: absolute;
-    top: -50px;
-    height: 150px;
-    width: 150px;
-}
-
-.avatar_wrapper img {
-    border-radius: 150px;
-    /*box-shadow: 0 0 6px 1px #505050;*/
-    border: 8px solid #f1f1f1;
-    height: inherit;
-    width: inherit;
-}
 
 .my_details {
     width: 100%;
@@ -179,7 +172,6 @@ body {
     flex-flow: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 50px;
     margin-top: 90px;
 }
 
@@ -187,7 +179,7 @@ body {
 .skill_container {
     display: flex;
     flex-flow: row wrap;
-    margin: 30px ;
+    margin: 30px;
 }
 
 .skill_wrapper {
@@ -263,7 +255,7 @@ body {
     flex-flow: row wrap;
     justify-content: space-around;
     /*background: url("./assets/background5.jpg");*/
-    background-color: #000000;
+    background-color: #3c3c3c;
     background-image: var(--background-url);
     min-height: 300px;
     /*background-repeat: no-repeat;*/
@@ -443,7 +435,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: #3c3c3c;
     background-image: var(--background-url)
 }
 
@@ -551,27 +543,40 @@ body {
     margin: 3%;
 }
 
-@media screen and (min-width: 1600px){
+/*@media screen and (min-width: 1600px) {*/
+/*    .avatar_container {*/
+/*        width: 700px;*/
+/*    }*/
+/*}*/
+@media screen and (max-width: 1024px){
+    .header{
+        height: unset;
+        padding-top: 80px;
+    }
     .avatar_container{
-        width: 700px;
+        width: 40%;
+    }
+    .personalWrapper{
+        flex-flow: column;
+        align-items: center;
+    }
+    .cover_letter{
+        width: 80%;
     }
 }
 @media screen and (max-width: 768px) {
 
 
-
-
-
     .header {
         height: auto;
         flex-direction: column;
+        padding-top: 40px;
     }
 
     .avatar_container {
         display: flex;
         flex-flow: row wrap;
-        /*padding: 10px 30px;*/
-        width: 100%;
+        width: 90%;
         height: auto;
         align-items: center;
         margin-top: 0;
@@ -591,9 +596,7 @@ body {
         padding: 20px;
         margin-top: 0;
     }
-
-    .my_info #aboutMe p {
-        text-align: center;
+    .cover_letter p {
         font-size: 18px;
     }
 
@@ -626,9 +629,6 @@ body {
         font-size: 20px;
     }
 
-    .my_info #aboutMe {
-        flex-basis: 100%;
-    }
 
     .project_info {
         width: 100%;
