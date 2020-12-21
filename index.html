@@ -20,57 +20,102 @@
         <a id="nav_project">Projects</a>
     </nav>
     <header class="header">
-        <div class="personalWrapper">
-            <div class="avatar_container">
-                <div class="avatar_wrapper">
-                    <img src="assets/IMG_20160729_005412.jpg"/>
-                </div>
-                <div class="details_wrapper">
-                    <div class="my_info">
-                        <div class="name_occupation_wrapper">
-                            <h1 id="name">Obada Darwish</h1>
-                            <h3 id="jobTitle">Front-end Web Developer</h3>
-                        </div>
-                    </div>
+        <div class="avatar_wrapper">
+            <img src="assets/IMG_20160729_005412.jpg"/>
+        </div>
+        <div class="details_wrapper">
+            <div class="my_info">
+                <div class="name_occupation_wrapper">
+                    <h1 id="name">Obada Darwish</h1>
+                    <h3 id="jobTitle">Front-end Web Developer</h3>
                 </div>
             </div>
-            <div class="cover_letter">
-                <p>I have 4+ years of front-end web development experience, I offer the technical expertise you are
-                    seeking for your web development position.
-                </p>
-                <p> I have handled challenging tasks using the most modern technologies like Angular and React
-                </p>
-            </div>
         </div>
-        <div class="skill_container">
-            <div class="skill_wrapper">
-                <i class="fab fa-2x fa-angular"></i>
-                <p>Angular</p>
-            </div>
-            <div class="skill_wrapper">
-                <i class="fab fa-2x fa-react"></i>
-                <p>React</p>
-            </div>
-            <div class="skill_wrapper"><i class="fab fa-2x fa-node"></i>
-                <p>Node.js</p></div>
-            <div class="skill_wrapper">
-                <i class="fab fa-2x fa-js"></i>
-                <p>JS</p>
-            </div>
-            <div class="skill_wrapper">
-                <i class="fab fa-2x fa-html5"></i>
-                <p>HTML5</p></div>
-            <div class="skill_wrapper">
-                <i class="fab fa-2x fa-css3"></i>
-                <p>CSS</p></div>
-            <div class="skill_wrapper">
-                <i class="fab fa-2x fa-sass"></i>
-                <p>SCSS</p>
-            </div>
-        </div>
+
+
         <!--<div class="horizontal_tilted_line negative_skew black top"></div>-->
     </header>
     <main>
+        <div class="cover_letter">
+            <h1>Personal details</h1>
+            <p>I have 4+ years of front-end web development experience, I offer the most modern technical skills
+              in the field.
+            </p>
+            <p> I have handled challenging tasks using the most modern technologies like Angular and React
+            </p>
+        </div>
+        <h1 class="skills_title">Skills</h1>
+        <div class="skill_container">
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-angular"></i>
+                    <p>Angular</p>
+                </div>
+                <div class="progress_bar">
+                    <div class="percentage">90%</div>
+                    <div class="bar x90"></div>
+                </div>
+            </div>
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="progress_bar">
+                    <div class="percentage">90%</div>
+                    <div class="bar x90"></div>
+                </div>
+            </div>
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-node"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="progress_bar">
+                    <div class="percentage">80%</div>
+                    <div class="bar x80"></div>
+                </div>
+            </div>
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-js"></i>
+                    <p>JS</p>
+                </div>
+                <div class="progress_bar">
+                    <div class="percentage">95%</div>
+                    <div class="bar x95"></div>
+                </div>
+            </div>
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-html5"></i>
+                    <p>HTML5</p></div>
+                <div class="progress_bar">
+                    <div class="percentage">95%</div>
+                    <div class="bar x95"></div>
+                </div>
+            </div>
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-css3"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="progress_bar">
+                    <div class="percentage">95%</div>
+                    <div class="bar x95"></div>
+                </div>
+            </div>
+            <div class="skill_wrapper">
+                <div class="skill_details">
+                    <i class="fab fa-2x fa-sass"></i>
+                    <p>SCSS</p>
+                </div>
+                <div class="progress_bar">
+                    <div class="percentage">70%</div>
+                    <div class="bar x70"></div>
+                </div>
+            </div>
+        </div>
         <div class="skills_set">
             <div class="skill">
                 <i class="fas fa-2x fa-seedling"></i>
@@ -99,7 +144,21 @@
             <div class="projects_title">
                 <h3>Projects</h3>
             </div>
-            <div class="project_container" onmouseenter="hoverProject('1')">
+            <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('1')">
+                <div class="img_wrapper" id="1">
+                    <div class="img_overlay">
+                        <div class="hash">React.js</div>
+                        <div class="hash">Redux</div>
+                        <div class="hash">Node.js</div>
+                    </div>
+                    <img class="image" src="assets/KakawPod.png"/>
+                </div>
+                <div class="project_info" id="kakawPod">
+                    <h1>KakawPod</h1>
+                    <p>Custom e-commerce website for a chocolate making company</p>
+                </div>
+            </div>
+            <div class="project_container" onmouseenter="hoverProject('2')">
                 <div class="project_info" id="gbarena">
                     <h1>GBarena</h1>
                     <p>An ANGULAR 7 built gaming platform, it is a website that provides a tool for tournaments
@@ -109,46 +168,45 @@
                         gamers to easily find their tournaments, the platform provides a community were users can
                         interact </p>
                 </div>
-                <div class="img_wrapper" id="1">
+                <div class="img_wrapper" id="2">
                     <div class="img_overlay">
                         <div class="hash">Angular 7</div>
                     </div>
                     <img class="image" src="assets/gbarena.PNG"/>
                 </div>
             </div>
-            <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('2')">
-                <div class="img_wrapper" id="2">
+            <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('3')">
+                <div class="img_wrapper" id="3">
                     <div class="img_overlay">
                         <div class="hash">Angular 2</div>
-                        <div class="hash">Laravel 5.3</div>
+                        <div class="hash">Node.js</div>
                     </div>
                     <img class="image" src="assets/donuts.JPG"/>
                 </div>
                 <div class="project_info" id="donuts">
                     <h1>Donut hub</h1>
-                    <p>An ANGULAR 2 built website, which views a store products of donuts and beverage
-                        it is connected with LARAVEL APIs to feed it with the data needed! </p>
+                    <p>An ANGULAR 2 built website, it is a donuts store, it has listed donuts and beverage</p>
                 </div>
             </div>
-            <div class="project_container" onmouseenter="hoverProject('3')">
+            <div class="project_container" onmouseenter="hoverProject('4')">
                 <div class="project_info" id="manar">
                     <h1>Manar Travel</h1>
                     <p>A React built website for a travel agency to view their features programs
                         aslo allow user to request a custom program with custom quota.
                         It's endpoints are written in Node.js </p>
                 </div>
-                <div class="img_wrapper" id="3">
+                <div class="img_wrapper" id="4">
                     <div class="img_overlay">
                         <div class="hash">React</div>
                         <div class="hash">Node.js</div>
                     </div>
                     <img class="image" src="assets/manarTravel.JPG"/></div>
             </div>
-            <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('4')">
-                <div class="img_wrapper" id="4">
+            <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('5')">
+                <div class="img_wrapper" id="5">
                     <div class="img_overlay">
                         <div class="hash">Angular 4</div>
-                        <div class="hash">Laravel 5.5</div>
+                        <div class="hash">Node.js</div>
                     </div>
                     <img class="image" src="assets/hamoudaFarms.JPG"/>
                 </div>
