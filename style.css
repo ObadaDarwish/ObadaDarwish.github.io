@@ -651,12 +651,14 @@ body {
         display: flex;
         justify-content: center;
         top: 0;
+        margin-left: 0;
     }
 
     .details_wrapper {
         flex-basis: 100%;
         padding: 20px;
         margin-top: 0;
+        margin-left: 0;
     }
 
     .cover_letter p {
