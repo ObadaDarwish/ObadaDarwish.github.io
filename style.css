@@ -623,6 +623,7 @@ body {
 
     .skill_container {
         margin: 10px;
+        flex-basis: 90%;
     }
 }
 
@@ -658,7 +659,7 @@ body {
         flex-basis: 100%;
         padding: 20px;
         margin-top: 0;
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
     .cover_letter p {
