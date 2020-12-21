@@ -388,7 +388,7 @@ body {
     justify-content: space-around;
     width: 100%;
     position: relative;
-    padding-bottom: 3%;
+    padding: 10px 0;
 }
 
 .img_wrapper {
