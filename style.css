@@ -42,7 +42,7 @@ body {
     display: flex;
     width: 100%;
     align-self: flex-start;
-    background: #e6e6e6;
+    background: #8b8b8b;
     justify-content: flex-start;
     z-index: 100;
     height: 40px;
@@ -54,7 +54,7 @@ body {
     align-items: center;
     width: 80px;
     font-size: 14px;
-    color: #888888;
+    color: #fff;
     font-family: Georgia, sans-serif;
     transition: color 0.5s ease-in-out;
 }
@@ -68,38 +68,42 @@ body {
 .header {
     display: flex;
     flex-flow: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: 150px;
     /*background: #828282;*/
     background: rgb(124, 124, 124);
     background: linear-gradient(180deg, rgba(124, 124, 124, 1) 0%, rgba(149, 149, 149, 1) 100%);
+    margin-bottom: 3rem;
 }
 
 
 .avatar_wrapper {
     position: relative;
-    top: 35px;
+    top: 50px;
     height: 165px;
     width: 165px;
-    margin-left: 50px;
 }
 
 .avatar_wrapper img {
-    border-radius: 5px;
+    border-radius: 50%;
     /*box-shadow: 0 0 6px 1px #505050;*/
-    border: 5px solid #f1f1f1;
+    border: 7px solid #f1f1f1;
     height: inherit;
     width: inherit;
 }
 
+.details_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
 .details_wrapper {
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
     align-items: center;
-    margin-left: 50px;
 }
 
 .details_wrapper .my_info {
@@ -109,8 +113,8 @@ body {
     width: 100%;
 }
 
-.details_wrapper .my_info h1, h3, p {
-    color: #fff;
+.details_wrapper .my_info h1, .details_wrapper .my_info h3,.details_wrapper .my_info p {
+    color: #000;
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -127,8 +131,9 @@ body {
 }
 
 .details_wrapper .my_info .name_occupation_wrapper #name {
-    font-size: 55px;
+    font-size: 65px;
     display: none;
+    font-weight: bold;
     margin-top: 20px;
 }
 
@@ -139,13 +144,11 @@ body {
 
 .cover_skills_container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 45px 20px;
+    padding: 40px 20%
 }
 
 .cover_letter {
-    flex-basis: 40%;
+    flex-basis: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -161,134 +164,62 @@ body {
 .cover_letter p {
     font-size: 20px;
     color: #525252;
+    line-height: 30px;
+    text-align: center;
 }
-
+.gauge_container{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
 
 .skill_container {
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 50%;
+    align-items: center;
+    flex-basis: 40%;
 }
 
 .skill_wrapper {
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
-    width: 300px;
+   align-items: center;
     background: #dedede;
+    width: 150px;
     margin: 5px;
     border-radius: 10px;
-    padding: 0 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.skill_wrapper:hover{
+    background: #949494;
+}
+.skill_wrapper.active{
+    background: #949494;
+}
+.skill_wrapper.active .fab,.skill_wrapper.active p{
+    color: #fff;
+}
+.skill_wrapper:hover .fab,.skill_wrapper:hover p{
+    color: #fff;
 }
 
-.skill_wrapper .skill_details {
-    display: flex;
-}
-
-.skill_wrapper .skill_details .fab {
+.skill_wrapper .fab {
     color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
-.skill_wrapper .skill_details p {
+.skill_wrapper  p {
     text-align: center;
     color: #333333;
-    font-size: 30px;
-
+    font-size: 20px;
+    margin: 0.2rem;
 }
 
-.skill_wrapper .progress_bar {
-    width: 100%;
-    border-radius: 5px;
-    height: 22px;
-    background: #eeeeee;
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    box-shadow: 0 0 4px 1px #adadad;
-}
-
-.skill_wrapper .progress_bar .percentage {
-    position: absolute;
-    color: #333333;
-    font-size: 12px;
-    right: 5px;
-}
-
-.skill_wrapper .progress_bar .bar {
-
-    height: inherit;
-    background: #ff8c56;
-    border-radius: 5px;
-    transition: all 0.8s ease-in-out;
-}
-
-.skill_wrapper .progress_bar .bar.x10 {
-    width: 10%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x20 {
-    width: 20%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x30 {
-    width: 30%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x40 {
-    width: 40%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x50 {
-    width: 50%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x60 {
-    width: 60%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x70 {
-    width: 70%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x80 {
-    width: 80%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-@keyframes smoothRoll {
-    0% {
-        width: 0;
-    }
-    70% {
-        width: 70%;
-    }
-}
-
-.skill_wrapper .progress_bar .bar.x90 {
-    width: 90%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x95 {
-    width: 95%;
-    animation: smoothRoll 1.5s ease-in;
-}
-
-.skill_wrapper .progress_bar .bar.x100 {
-    width: 100%;
-    animation: smoothRoll 1.5s ease-in;
-}
 
 /*img {*/
 /*-webkit-transform: skew(-30deg);*/
@@ -308,8 +239,8 @@ body {
     /*background: url("./assets/background5.jpg");*/
     /*background-color: #3c3c3c;*/
     /*background-image: var(--background-url);*/
-    background: rgb(97, 97, 97);
-    background: linear-gradient(90deg, rgba(97, 97, 97, 1) 0%, rgba(131, 131, 131, 1) 50%, rgba(97, 97, 97, 1) 100%);
+    background: rgb(97,97,97);
+    background: linear-gradient(90deg, rgba(43,43,43,1) 50%, rgba(133,133,133,1) 100%);
     min-height: 300px;
     /*background-repeat: no-repeat;*/
     /*background-size: 100%;*/
@@ -401,7 +332,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 45%;
-    height: 400px;
+    height: 300px;
     margin: 3% 0;
     transition: 0.3s ease;
 }
@@ -624,6 +555,11 @@ body {
     .skill_container {
         margin: 10px;
         flex-basis: 90%;
+        justify-content: center;
+    }
+    .cover_skills_container {
+        display: flex;
+        padding: 40px 5%
     }
 }
 
@@ -636,24 +572,24 @@ body {
         padding-top: 40px;
     }
 
-    .avatar_container {
-        display: flex;
-        flex-flow: row wrap;
-        width: 90%;
-        height: auto;
-        align-items: center;
-        margin-top: 0;
-    }
+    /*.avatar_container {*/
+    /*    display: flex;*/
+    /*    flex-flow: row wrap;*/
+    /*    width: 90%;*/
+    /*    height: auto;*/
+    /*    align-items: center;*/
+    /*    margin-top: 0;*/
+    /*}*/
 
-    .avatar_wrapper {
-        flex-basis: 100%;
-        padding: 20px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        top: 0;
-        margin-left: 0;
-    }
+    /*.avatar_wrapper {*/
+    /*    flex-basis: 100%;*/
+    /*    padding: 20px;*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    top: 0;*/
+    /*    margin-left: 0;*/
+    /*}*/
 
     .details_wrapper {
         flex-basis: 100%;

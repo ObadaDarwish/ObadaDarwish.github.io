@@ -10,8 +10,7 @@
     <link rel="icon" href="assets/user.png" sizes="16x16">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="jquery.min.3.31.js"></script>
-    <script src="script.js"></script>
+
 </head>
 <body>
 <div class="body_container">
@@ -23,100 +22,91 @@
         <div class="avatar_wrapper">
             <img src="assets/IMG_20160729_005412.jpg"/>
         </div>
-        <div class="details_wrapper">
-            <div class="my_info">
-                <div class="name_occupation_wrapper">
-                    <h1 id="name">Obada Darwish</h1>
-                    <h3 id="jobTitle">Front-end Web Developer</h3>
-                </div>
-            </div>
-        </div>
+
 
 
         <!--<div class="horizontal_tilted_line negative_skew black top"></div>-->
     </header>
     <main>
-        <div class="cover_skills_container">
-            <div class="cover_letter">
-                <h1>About me</h1>
-                <p>I have 4+ years of front-end web development experience, I offer the most modern technical skills
-                    in the field.
-                </p>
-                <p> I have handled challenging tasks using the most modern technologies like Angular and React
-                </p>
-            </div>
-            <div class="skill_container">
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-angular"></i>
-                        <p>Angular</p>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="percentage">90%</div>
-                        <div class="bar x90"></div>
-                    </div>
-                </div>
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-react"></i>
-                        <p>React</p>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="percentage">90%</div>
-                        <div class="bar x90"></div>
-                    </div>
-                </div>
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-node"></i>
-                        <p>Node.js</p>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="percentage">80%</div>
-                        <div class="bar x80"></div>
-                    </div>
-                </div>
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-js"></i>
-                        <p>JS</p>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="percentage">95%</div>
-                        <div class="bar x95"></div>
-                    </div>
-                </div>
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-html5"></i>
-                        <p>HTML5</p></div>
-                    <div class="progress_bar">
-                        <div class="percentage">95%</div>
-                        <div class="bar x95"></div>
-                    </div>
-                </div>
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-css3"></i>
-                        <p>CSS</p>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="percentage">95%</div>
-                        <div class="bar x95"></div>
-                    </div>
-                </div>
-                <div class="skill_wrapper">
-                    <div class="skill_details">
-                        <i class="fab fa-2x fa-sass"></i>
-                        <p>SCSS</p>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="percentage">70%</div>
-                        <div class="bar x70"></div>
+        <div class="details_container">
+            <div class="details_wrapper">
+                <div class="my_info">
+                    <div class="name_occupation_wrapper">
+                        <h1 id="name">Obada Darwish</h1>
+                        <h3 id="jobTitle">Front-end Web Developer</h3>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="cover_skills_container">
+            <div class="cover_letter">
+<!--                <h1>About me</h1>-->
+                <p>I have <span id="yearCounter"></span> years of front-end web development experience, I offer the most modern technical skills
+                    in the field. <br>
+                    I have handled challenging tasks using the most modern technologies like Angular, React and Node.js.
+                </p>
+            </div>
+
+        </div>
+        <div class="gauge_container">
+            <div id="container-speed" class="chart-container"></div>
+            <div class="skill_container">
+                <div id="angular" class="skill_wrapper active">
+                    <i class="fab fa-2x fa-angular"></i>
+                    <p>Angular</p>
+                </div>
+                <div id="react" class="skill_wrapper">
+                    <i class="fab fa-2x fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div id="redux" class="skill_wrapper">
+                    <span class="fab fa-2x iconify" data-icon="bx:bxl-redux" data-inline="false"></span>
+                    <p>Redux</p>
+                </div>
+
+                <div id="node" class="skill_wrapper">
+                    <i class="fab fa-2x fa-node"></i>
+                    <p>Node.js</p>
+                </div>
+                <div id="js" class="skill_wrapper">
+                    <i class="fab fa-2x fa-js"></i>
+                    <p>JS</p>
+                </div>
+                <div id="ts" class="skill_wrapper">
+                    <span class="fab fa-2x iconify" data-icon="cib:typescript" data-inline="false"></span>
+                    <p>TS</p>
+                </div>
+                <div id="html" class="skill_wrapper">
+                    <i class="fab fa-2x fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div id="css" class="skill_wrapper">
+                    <i class="fab fa-2x fa-css3"></i>
+                    <p>CSS</p>
+                </div>
+                <div id="scss" class="skill_wrapper">
+                    <i class="fab fa-2x fa-sass"></i>
+                    <p>SCSS</p>
+                </div>
+                <div id="mongodb" class="skill_wrapper">
+                <span class="fab fa-2x iconify" data-icon="cib:mongodb" data-inline="false"></span>
+                    <p>MongoDB</p>
+                </div>
+                <div id="mysql" class="skill_wrapper">
+                <span class="fab fa-2x iconify" data-icon="cib:mysql" data-inline="false"></span>
+                    <p>MySQL</p>
+                </div>
+                <div id="git" class="skill_wrapper">
+                    <span class="fab fa-2x iconify" data-icon="bx:bx-git-branch" data-inline="false"></span>
+                    <p>GIT</p>
+                </div>
+                <div id="gulp" class="skill_wrapper">
+                    <span class="fab fa-2x iconify" data-icon="cib:gulp" data-inline="false"></span>
+                    <p>GIT</p>
+                </div>
+            </div>
+        </div>
+
 
         <div class="skills_set">
             <div class="skill">
@@ -143,9 +133,9 @@
         <div class="projects_block">
 
             <!--<div class="down_triangle"></div>-->
-            <div class="projects_title">
-                <h3>Projects</h3>
-            </div>
+<!--            <div class="projects_title">-->
+<!--                <h3>Projects</h3>-->
+<!--            </div>-->
             <div class="project_container" style="background: #f1f1f1;" onmouseenter="hoverProject('1')">
                 <div class="img_wrapper" id="1">
                     <div class="img_overlay">
@@ -239,6 +229,14 @@
         <i id="scroll_up" class="fas fa-2x fa-chevron-circle-up"></i>
     </footer>
 </div>
-
+<script src="jquery.min.3.31.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
