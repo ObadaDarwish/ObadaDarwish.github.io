@@ -21,12 +21,11 @@ $(document).ready(function () {
     $('#scroll_up').click(function () {
         $('html').animate({scrollTop: 0}, 1000);
     });
-
     var gaugeOptions = {
         chart: {
             type: 'solidgauge',
             backgroundColor: '#eee',
-            height: 400
+            height: 400,
         },
 
         title: null,

@@ -94,11 +94,12 @@ body {
     width: inherit;
 }
 
-.details_container{
+.details_container {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
 }
+
 .details_wrapper {
     display: flex;
     flex-flow: column;
@@ -113,7 +114,7 @@ body {
     width: 100%;
 }
 
-.details_wrapper .my_info h1, .details_wrapper .my_info h3,.details_wrapper .my_info p {
+.details_wrapper .my_info h1, .details_wrapper .my_info h3, .details_wrapper .my_info p {
     color: #000;
     width: 100%;
     text-align: center;
@@ -167,7 +168,8 @@ body {
     line-height: 30px;
     text-align: center;
 }
-.gauge_container{
+
+.gauge_container {
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: space-around;
@@ -184,7 +186,7 @@ body {
 .skill_wrapper {
     display: flex;
     flex-flow: column;
-   align-items: center;
+    align-items: center;
     background: #dedede;
     width: 150px;
     margin: 5px;
@@ -195,16 +197,20 @@ body {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.skill_wrapper:hover{
+
+.skill_wrapper:hover {
     background: #949494;
 }
-.skill_wrapper.active{
+
+.skill_wrapper.active {
     background: #949494;
 }
-.skill_wrapper.active .fab,.skill_wrapper.active p{
+
+.skill_wrapper.active .fab, .skill_wrapper.active p {
     color: #fff;
 }
-.skill_wrapper:hover .fab,.skill_wrapper:hover p{
+
+.skill_wrapper:hover .fab, .skill_wrapper:hover p {
     color: #fff;
 }
 
@@ -213,7 +219,7 @@ body {
 
 }
 
-.skill_wrapper  p {
+.skill_wrapper p {
     text-align: center;
     color: #333333;
     font-size: 20px;
@@ -239,8 +245,8 @@ body {
     /*background: url("./assets/background5.jpg");*/
     /*background-color: #3c3c3c;*/
     /*background-image: var(--background-url);*/
-    background: rgb(97,97,97);
-    background: linear-gradient(90deg, rgba(43,43,43,1) 50%, rgba(133,133,133,1) 100%);
+    background: rgb(97, 97, 97);
+    background: linear-gradient(90deg, rgba(43, 43, 43, 1) 50%, rgba(133, 133, 133, 1) 100%);
     min-height: 300px;
     /*background-repeat: no-repeat;*/
     /*background-size: 100%;*/
@@ -552,11 +558,6 @@ body {
         margin: 10px;
     }
 
-    .skill_container {
-        margin: 10px;
-        flex-basis: 90%;
-        justify-content: center;
-    }
     .cover_skills_container {
         display: flex;
         padding: 40px 5%
@@ -580,7 +581,6 @@ body {
     /*    align-items: center;*/
     /*    margin-top: 0;*/
     /*}*/
-
     /*.avatar_wrapper {*/
     /*    flex-basis: 100%;*/
     /*    padding: 20px;*/
@@ -590,8 +590,10 @@ body {
     /*    top: 0;*/
     /*    margin-left: 0;*/
     /*}*/
-
-    .details_wrapper {
+    .skill_container {
+        flex-basis: 100%;
+    }
+.details_wrapper {
         flex-basis: 100%;
         padding: 20px;
         margin-top: 0;
@@ -607,9 +609,6 @@ body {
         padding: 20px 50px;
     }
 
-    .skill_container {
-        justify-content: center;
-    }
 
     .clipped_background {
         display: none;
@@ -668,6 +667,9 @@ body {
 
     .footer_block .socials .icons a {
         font-size: 16px;
+    }
+    .chart-container{
+        display: none;
     }
 }
 
