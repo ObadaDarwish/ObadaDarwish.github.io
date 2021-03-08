@@ -98,6 +98,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    min-height: 12rem;
 }
 
 .details_wrapper {
@@ -153,20 +154,45 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
     background: white;
     box-shadow: 0 0 4px 2px #dedede;
-    padding: 15px;
 }
 
-.cover_letter h1 {
-    text-align: center;
+.cover_letter .top-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8b8b8b;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
 }
+
+.cover_letter .top-cover .cover_icon {
+    background: #333333;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 75%;
+    /*position: absolute;*/
+    /*top: -1rem;*/
+}
+
+.cover_letter .top-cover .cover_icon .fa {
+    color: #fff;
+}
+
 
 .cover_letter p {
     font-size: 20px;
     color: #525252;
     line-height: 30px;
     text-align: center;
+    padding: 1rem;
 }
 
 .gauge_container {
@@ -174,12 +200,18 @@ body {
     flex-flow: row-reverse wrap;
     justify-content: space-around;
     margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.chart-container {
+    flex-basis: 50%;
 }
 
 .skill_container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
     flex-basis: 40%;
 }
 
@@ -245,8 +277,8 @@ body {
     /*background: url("./assets/background5.jpg");*/
     /*background-color: #3c3c3c;*/
     /*background-image: var(--background-url);*/
-    background: rgb(97, 97, 97);
-    background: linear-gradient(90deg, rgba(43, 43, 43, 1) 50%, rgba(133, 133, 133, 1) 100%);
+    background: rgba(43, 43, 43, 1);
+    /*background: linear-gradient(90deg, rgba(43, 43, 43, 1) 50%, rgba(133, 133, 133, 1) 100%);*/
     min-height: 300px;
     /*background-repeat: no-repeat;*/
     /*background-size: 100%;*/
@@ -276,6 +308,10 @@ body {
     align-items: center;
     flex-basis: 30%;
     z-index: 1;
+}
+
+.skills_set .skill p {
+    text-align: center;
 }
 
 /*----------------------------------------  projects block ------------------------------------------*/
@@ -347,7 +383,7 @@ body {
     width: 100%;
     height: inherit;
     position: relative;
-    transition: 0.5s ease;
+    transition: 0.7s ease;
 }
 
 /*.project_container img:hover {*/
@@ -364,7 +400,6 @@ body {
     align-items: center;
     flex-flow: row wrap;
     display: none;
-    cursor: pointer;
 }
 
 .img_overlay .hash {
@@ -406,11 +441,15 @@ body {
     font-size: 20px;
     display: flex;
     align-items: center;
+    position: relative;
+    margin-left: 2rem;
 }
 
 .project_info p::before {
     content: '';
-    width: 10px;
+    position: absolute;
+    left: -2rem;
+    width: 5px;
     background: #afafaf;
     height: 100px;
     display: inline-block;
@@ -453,8 +492,6 @@ body {
     align-items: center;
 }
 
-.footer_block .socials .icons i {
-}
 
 .footer_block .socials .icons a {
     background: #3a3a3a;
@@ -554,13 +591,17 @@ body {
     }
 
     .cover_letter {
-        flex-basis: 90%;
+        flex-basis: 95%;
         margin: 10px;
     }
 
     .cover_skills_container {
         display: flex;
-        padding: 40px 5%
+        padding: 40px 3%
+    }
+    .gauge_container{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -593,7 +634,8 @@ body {
     .skill_container {
         flex-basis: 100%;
     }
-.details_wrapper {
+
+    .details_wrapper {
         flex-basis: 100%;
         padding: 20px;
         margin-top: 0;
@@ -660,6 +702,16 @@ body {
         opacity: 1;
     }
 
+    .footer_block {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    .fa-chevron-circle-up{
+        margin: 0;
+    }
+
     .footer_block .socials {
 
         flex-basis: 70%;
@@ -668,7 +720,8 @@ body {
     .footer_block .socials .icons a {
         font-size: 16px;
     }
-    .chart-container{
+
+    .chart-container {
         display: none;
     }
 }
