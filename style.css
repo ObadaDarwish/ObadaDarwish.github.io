@@ -67,132 +67,102 @@ body {
 /*------------------------------------------- info block ---------------------------------------*/
 .header {
     display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap;
     width: 100%;
-    height: 150px;
-    /*background: #828282;*/
-    background: rgb(124, 124, 124);
-    background: linear-gradient(180deg, rgba(124, 124, 124, 1) 0%, rgba(149, 149, 149, 1) 100%);
+    height: 97vh;
+    background: #828282;
+    /*background: rgb(124, 124, 124);*/
+    /*background: linear-gradient(180deg, rgba(124, 124, 124, 1) 0%, rgba(149, 149, 149, 1) 100%);*/
     margin-bottom: 3rem;
+    overflow: hidden;
 }
 
+.header .lefSection {
+    flex-basis: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
 
-.avatar_wrapper {
-    position: relative;
-    top: 50px;
+.header .lefSection .avatar_wrapper {
     height: 165px;
     width: 165px;
+    margin-bottom: 100px;
 }
 
-.avatar_wrapper img {
+.header .lefSection .avatar_wrapper img {
     border-radius: 50%;
     /*box-shadow: 0 0 6px 1px #505050;*/
-    border: 7px solid #f1f1f1;
+    border: 7px solid #fff;
     height: inherit;
     width: inherit;
 }
 
-.details_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    min-height: 12rem;
+.header .lefSection h1 {
+    color: #ffffff;
+    font-size: 60px;
+    margin: 0;
 }
 
-.details_wrapper {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.details_wrapper .my_info {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.details_wrapper .my_info h1, .details_wrapper .my_info h3, .details_wrapper .my_info p {
-    color: #000;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.details_wrapper .my_info .name_occupation_wrapper {
-    position: relative;
-    flex-basis: 40%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 10px;
-}
-
-.details_wrapper .my_info .name_occupation_wrapper #name {
-    font-size: 65px;
-    display: none;
-    font-weight: bold;
+.header .lefSection h4 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0;
     margin-top: 20px;
 }
 
-.details_wrapper .my_info .name_occupation_wrapper #jobTitle {
-    display: none;
-    font-size: 25px;
-}
-
-.cover_skills_container {
-    display: flex;
-    padding: 40px 20%
-}
-
-.cover_letter {
-    flex-basis: 100%;
+.header .rightSection {
+    flex-basis: 50%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    background: white;
-    box-shadow: 0 0 4px 2px #dedede;
+    background: #ffffff;
 }
 
-.cover_letter .top-cover {
+.header .rightSection .infoCard {
     display: flex;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
-    background: #8b8b8b;
-    height: 70px;
-    width: 100%;
+    background: #828282;
+    width: 50%;
+    margin: 20px 0;
     position: relative;
-    margin-bottom: 1rem;
+    transition: left 0.6s ease-in-out;
 }
 
-.cover_letter .top-cover .cover_icon {
-    background: #333333;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 75%;
-    /*position: absolute;*/
-    /*top: -1rem;*/
+.header .rightSection .infoCard:first-child {
+    left: 1000px;
 }
 
-.cover_letter .top-cover .cover_icon .fa {
+.header .rightSection .infoCard:nth-child(2) {
+    left: 1500px;
+}
+
+.header .rightSection .infoCard:last-child {
+    left: 2000px;
+}
+
+.header .rightSection .infoCard p {
+    font-size: 20px;
     color: #fff;
 }
 
-
-.cover_letter p {
-    font-size: 20px;
-    color: #525252;
-    line-height: 30px;
-    text-align: center;
-    padding: 1rem;
+.header .rightSection .infoCard .fa {
+    background: #4e4e4e;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: #fff;
+    margin-left: 0;
+    position: absolute;
+    left: -13px;
+    border: 2px solid #ffffff;
 }
 
 .gauge_container {
@@ -416,21 +386,8 @@ body {
     flex-flow: column;
     width: 50%;
     margin: 20px;
-}
-
-#manar {
-    opacity: 0;
     transition: opacity 2s ease;
-}
-
-#donuts {
     opacity: 0;
-    transition: opacity 2s ease;
-}
-
-#farm {
-    opacity: 0;
-    transition: opacity 2s ease;
 }
 
 .project_info h1, .project_info p {
@@ -577,10 +534,25 @@ body {
 /*}*/
 @media screen and (max-width: 1024px) {
     .header {
-        height: unset;
-        padding-top: 80px;
+        padding-top: 40px;
     }
 
+    .header .lefSection .avatar_wrapper {
+        margin-bottom: 30px;
+    }
+
+    .header .lefSection h1 {
+        font-size: 40px;
+    }
+
+    .header .lefSection h4 {
+        font-size: 25px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .header .rightSection .infoCard {
+        width: 80%;
+    }
     .avatar_container {
         width: 40%;
     }
@@ -599,7 +571,8 @@ body {
         display: flex;
         padding: 40px 3%
     }
-    .gauge_container{
+
+    .gauge_container {
         flex-direction: column;
         align-items: center;
     }
@@ -607,30 +580,21 @@ body {
 
 @media screen and (max-width: 768px) {
 
-
     .header {
         height: auto;
-        flex-direction: column;
-        padding-top: 40px;
+        padding-top: 50px;
     }
 
-    /*.avatar_container {*/
-    /*    display: flex;*/
-    /*    flex-flow: row wrap;*/
-    /*    width: 90%;*/
-    /*    height: auto;*/
-    /*    align-items: center;*/
-    /*    margin-top: 0;*/
-    /*}*/
-    /*.avatar_wrapper {*/
-    /*    flex-basis: 100%;*/
-    /*    padding: 20px;*/
-    /*    position: relative;*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*    top: 0;*/
-    /*    margin-left: 0;*/
-    /*}*/
+    .header .lefSection {
+        flex-basis: 100%;
+        padding: 20px 0;
+    }
+
+    .header .rightSection {
+        flex-basis: 100%;
+        padding: 20px 0;
+    }
+
     .skill_container {
         flex-basis: 100%;
     }
@@ -690,17 +654,6 @@ body {
         width: 80%;
     }
 
-    #manar {
-        opacity: 1;
-    }
-
-    #donuts {
-        opacity: 1;
-    }
-
-    #farm {
-        opacity: 1;
-    }
 
     .footer_block {
         flex-direction: column;
@@ -708,7 +661,8 @@ body {
         padding-bottom: 1rem;
         padding-top: 1rem;
     }
-    .fa-chevron-circle-up{
+
+    .fa-chevron-circle-up {
         margin: 0;
     }
 

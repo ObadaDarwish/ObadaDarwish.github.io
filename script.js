@@ -11,8 +11,7 @@ $(document).ready(function () {
     $('#nav_home').click(function () {
         $('html').animate({scrollTop: 0}, 1000);
     });
-    $('#aboutMe').slideDown(1500);
-    $('#aboutMe').css('display', 'flex');
+    $('.infoCard').fadeIn(500).css({"left":0});
 
     $('#nav_project').click(function () {
         $('html').animate({scrollTop: $('.projects_block').offset().top}, 1000);
@@ -208,15 +207,11 @@ function openProfile(url) {
 }
 
 $(document).scroll(function () {
-    if (($(this).scrollTop() + 350) >= $('#donuts').offset().top) {
-        $('#donuts').css('opacity', '1');
-    }
-    if (($(this).scrollTop() + 350) >= $('#manar').offset().top) {
-        $('#manar').css('opacity', '1');
-    }
-    if (($(this).scrollTop() + 350) >= $('#farm').offset().top) {
-        $('#farm').css('opacity', '1');
-    }
-
-    // $('.header_block').css({background: $(this).scrollTop() > $('.my_details').offset().top ? 'rgba(0, 0, 0,1)' : 'rgb(159, 159, 159)'});
+    const topIndex=$(this).scrollTop()
+    const projects=$('.project_info');
+    projects.each(function (index){
+        if (( topIndex+ 350) >= $('#'+this.id).offset().top) {
+            $('#'+this.id).css('opacity', '1');
+        }
+    })
 });
